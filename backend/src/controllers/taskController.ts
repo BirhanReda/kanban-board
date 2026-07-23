@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
-import type { Task, TaskStatus } from '../types/task.ts';
-import { createTask, deleteTask, getTasksByUser, updateTask } from '../services/taskService.ts';
+import type { Task, TaskStatus } from '../types/task.js';
+import { createTask, deleteTask, getTasksByUser, updateTask } from '../services/taskService.js';
 
 const validStatuses: TaskStatus[] = ['todo', 'in_progress', 'in_review', 'done'];
 const validPriorities = ['low', 'normal', 'high'];

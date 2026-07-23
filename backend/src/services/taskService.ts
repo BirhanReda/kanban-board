@@ -1,5 +1,5 @@
-import type { Task } from '../types/task.ts';
-import { supabase } from '../config/supabase.ts';
+import type { Task } from '../types/task.js';
+import { supabase } from '../config/supabase.js';
 
 export async function getTasksByUser(userId: string): Promise<Task[]> {
   const { data, error } = await supabase

@@ -33,10 +33,39 @@ A React + TypeScript kanban board built with Supabase anonymous auth and task pe
    ```bash
    npm install
    ```
-5. Start backend:
+5. Start backend in development:
    ```bash
    npm run dev
    ```
+6. Build and run production locally:
+   ```bash
+   npm run build
+   npm start
+   ```
+
+## Deployment
+### Backend (recommended: Render)
+- Use `render.yaml` in the repo root to deploy the backend service.
+- In Render, set the service root to `backend`.
+- Build command: `npm install && npm run build`
+- Start command: `npm start`
+- Add environment variables:
+  - `SUPABASE_URL`
+  - `SUPABASE_SERVICE_ROLE_KEY`
+  - `FRONTEND_URL` (optional, for CORS)
+
+### Frontend (recommended: Vercel)
+- Deploy the `frontend` folder as a static site.
+- Build command: `npm install && npm run build`
+- Output directory: `dist`
+- Add environment variables:
+  - `VITE_SUPABASE_URL`
+  - `VITE_SUPABASE_ANON_KEY`
+  - `VITE_API_URL` (set to your deployed backend URL)
+
+### Alternative hosts
+- Frontend: Netlify, Vercel, or any static host serving `frontend/dist`
+- Backend: Render, Railway, Fly, or any Node host running `backend/dist/server.js`
 
 ## Project structure
 

@@ -1,4 +1,4 @@
-import type { Task } from './task.ts';
+import type { Task } from './task.js';
 
 export type Database = {
   public: {

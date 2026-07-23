@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: kanban-backend
+    env: node
+    plan: free
+    region: oregon
+    root: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    branch: main
+    envVars:
+      - key: SUPABASE_URL
+        fromSecret: SUPABASE_URL
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        fromSecret: SUPABASE_SERVICE_ROLE_KEY
+    autoDeploy: true

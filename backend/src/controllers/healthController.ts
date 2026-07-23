@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { supabase } from '../config/supabase.ts';
+import { supabase } from '../config/supabase.js';
 
 export function healthCheck(req: Request, res: Response) {
   res.json({
