@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import { healthCheck } from '../controllers/healthController.ts';
+import { healthCheck, supabaseHealthCheck } from '../controllers/healthController.ts';
 
 const router = Router();
 
 router.get('/', healthCheck);
+router.get('/supabase', supabaseHealthCheck);
 
 export default router;
