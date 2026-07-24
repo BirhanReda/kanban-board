@@ -8,9 +8,4 @@ services:
     buildCommand: npm install && npm run build
     startCommand: npm start
     branch: master
-    envVars:
-      - key: SUPABASE_URL
-        fromSecret: SUPABASE_URL
-      - key: SUPABASE_SERVICE_ROLE_KEY
-        fromSecret: SUPABASE_SERVICE_ROLE_KEY
     autoDeploy: true
