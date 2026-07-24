@@ -7,7 +7,7 @@ services:
     root: backend
     buildCommand: npm install && npm run build
     startCommand: npm start
-    branch: main
+    branch: master
     envVars:
       - key: SUPABASE_URL
         fromSecret: SUPABASE_URL
